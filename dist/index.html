@@ -1,9 +1,22 @@
-<!DOCTYPE html><html><head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Rust Nostr Subscription</title>
-    <script type="module">import init from '/rns-web-c9c7f870be19af1e.js';init('/rns-web-c9c7f870be19af1e_bg.wasm');</script>
-    <base href="/">
+    
+<script type="module" nonce="Tcc6rhyi4i5xuOIIDm2zng==">
+import init, * as bindings from '/rns-web-7f35b5c05c348f56.js';
+const wasm = await init({ module_or_path: '/rns-web-7f35b5c05c348f56_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+    <base href="/" />
     
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
@@ -16,12 +29,9 @@
         window.alert("WASM not supported! Please enable it.");
       }
     </script>
-  
-<link rel="preload" href="/rns-web-c9c7f870be19af1e_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/rns-web-c9c7f870be19af1e.js"></head>
+  <link rel="modulepreload" href="/rns-web-7f35b5c05c348f56.js" crossorigin=anonymous integrity="sha384-R4GGgHNXLy9gpvaFrES7mYoXwltZ6ecCTSfkEpWUSJleh3aZW4YJE0PnqUGcegZL"><link rel="preload" href="/rns-web-7f35b5c05c348f56_bg.wasm" crossorigin=anonymous integrity="sha384-7YFTW45/f/ZeCOPHJ8iZlGBmlxbIEw01Oa2nYhFlGKQXTzbsYU4iEzshtNH0Yylw" as="fetch" type="application/wasm"></head>
 
   <body class="d-flex justify-content-center align-items-center" style="min-height: 100vh; margin-top: 24px; margin-bottom: 24px;">
     <div class="spinner"></div>
-  
-
-</body></html>
+  </body>
+</html>
